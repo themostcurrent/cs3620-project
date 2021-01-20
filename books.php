@@ -1,4 +1,4 @@
 <?phphead("Access-Control-Allow-Origin: *");
 ?>
 
-{"books-read":[{"Title":"The Hobbit","Author":"J. R. R. Tolkien"},{"Title":"The Body", "Author":"Bill Bryson"}]}
+{"books-read":[{"Title":"Outliers","Author":"Malcolm Gladwell"},{"Title":"The Talent Code", "Author":"Daniel Coyle"},{"Title":"The Last Wish", "Author":"Andrezej Sapkowski"},{"Title":"The Body", "Author":"Bill Bryson"}]}

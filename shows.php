@@ -1,7 +1,9 @@
 <?php
 $servername = "bookscs3620.mysql.database.azure.com";
-$username = "Joey@bookscs3620";
-$password = "Metobe3!";
+
+$username = "$_Env['SQLUSER']";
+$password = "$_Env['SQLPW']";
+
 $dbname = "testdb";
 
 // Create connection

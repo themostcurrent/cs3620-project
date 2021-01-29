@@ -1,8 +1,10 @@
 <?php
-$servername = "bookscs3620.mysql.database.azure.com";
+session_start();
 
-$username = "$_Env['SQLUSER']";
-$password = "$_Env['SQLPW']";
+$servername = "bookscs3620.mysql.database.azure.com";
+//if the SQLUSER is there then use it, if not use the $_ENV
+$username = (isset($_SESSION["SQLUSER"]) ? $_SESSION["SQLUSER"] : "$_Env['SQLUSER']");
+$password = (isset($_SESSION["SQLPW"]) ? $_SESSION["SQLPW"] : "$_Env['SQLPW']");
 
 $dbname = "testdb";
 

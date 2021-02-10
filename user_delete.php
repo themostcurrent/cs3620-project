@@ -1,10 +1,14 @@
-
-
+  
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    require_once('./user/user.php');
+session_start();
 
-        $user = new user();
+require_once('./user/user.php');
 
-        $user->deleteUser($_POST['username']);
+$user = new user();
+$user->deleteUser($_POST['username']);
+
 ?>

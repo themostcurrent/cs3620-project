@@ -42,7 +42,7 @@ class User {
   }
   
   function getPassword(){
-    retrun $this->password;
+    return $this->password;
   }
 
   function getUser($user_id){
@@ -55,6 +55,11 @@ class User {
   function createUser(){
     $userDAO = new userDAO();
     $userDAO->createUser($this);
+  }
+
+  function deleteUser($username){
+    $userDAO = new userDAO();
+    $userDAO->deleteUser($username);
   }
 }
 ?>

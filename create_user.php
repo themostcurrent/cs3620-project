@@ -1,5 +1,6 @@
 <?php
-    require_once('./user/user.php');
+    require_once('./header.php');
+    
 ?>
 
 <form method="POST" target="user_insert.php">
@@ -8,7 +9,7 @@
     Last Name: <input type="text" name ="lastName"/><br />
     Password: <input type="password" name ="password"/><br />
     <input type="submit" value="Create User" />
-    
+
 </form>
 
 

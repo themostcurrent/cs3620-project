@@ -40,6 +40,20 @@ class UserDAO {
 
     
     $conn->close();
+
+    echo"user created";
+  }
+
+  function deleteUser($u){
+    require_once('./utilities/connection.php');
+    
+    $sql = "DELETE FROM testdb.user WHERE username = '".$u."';";
+    $result = $conn->query($sql);
+
+    
+    $conn->close();
+       echo"user deleted";
+
   }
 }
 ?>

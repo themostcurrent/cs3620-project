@@ -19,5 +19,27 @@ class UserDAO {
     }
     $conn->close();
   }
+
+  function createUser($user){
+    require_once('./utilities/connection.php');
+    
+    $sql = "INSERT INTO user_table.user
+    (
+    `Username`,
+    `FirstName`,
+    `LastName`,
+    `Password`)
+    VALUES
+    ('".$USER->getUsername()."',
+     '".$USER->getFirstname()."',
+     '".$USER->getLastName()."',
+     '".$USER->getPassword()."',
+    );
+    ";
+    $result = $conn->query($sql);
+
+    
+    $conn->close();
+  }
 }
 ?>

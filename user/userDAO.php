@@ -20,6 +20,24 @@ class UserDAO {
     $conn->close();
   }
 
+  function checkLogin($passedInUsername, $password){
+    require_once('./utilities/connection.php');
+    $user_id = 0;
+
+    $sql = "SELECT user_id FROM user WHERE username = '".$passedInUsername."' AND password = '".hash("sha256",$password)."';
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      user_id = $row["user_id"];
+    }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    return $user_id;
+  }
+
   function createUser($user){
     require_once('./utilities/connection.php');
     
